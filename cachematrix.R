@@ -2,7 +2,8 @@
 ## computations: in this particular case matrix inversion.
 
 ## The first function makeCacheMatrix() 
-## sets up the cache but does not calculate the inverse 
+## sets up the cache (but does not calculate the inverse) 
+## producing a list of functions set(), get(), setmean(), getmean()
 
 makeCacheMatrix <- function(m = matrix()) {
         inv <- NULL
@@ -42,3 +43,5 @@ cacheSolve <- function(m, ...) {
 #cmat <- makeCacheMatrix(mymat) ## set up on mymat but do not calculate yet
 #cacheSolve(cmat)               ## nothing cached so calculate and cache 
 #cacheSolve(cmat)               ## this time inverse cached so use cache
+
+## Code based on Roger D. Peng's cachevectormean example
