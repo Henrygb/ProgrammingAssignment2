@@ -1,4 +1,4 @@
-## These two R functions able to cache potentially time-consuming 
+## These two R functions can cache potentially time-consuming 
 ## computations: in this particular case matrix inversion.
 
 ## The first function makeCacheMatrix() 
