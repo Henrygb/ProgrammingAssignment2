@@ -1,3 +1,17 @@
+### Description
+
+My response to Programming Assignment 2 of the Coursera R Programming 
+course by Roger D. Peng, caching the inverse of a matrix.
+
+Two R scripts are also in the repository:
+
+1. cachematrix.R as requested for the assignment
+2. cachevectormean.R using the example code below
+
+cachematrix.R is adapted from cachevectormean.R
+
+The original instructions for the assignment are below.
+
 ### Introduction
 
 This second programming assignment will require you to write an R
