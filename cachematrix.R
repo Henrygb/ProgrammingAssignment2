@@ -3,7 +3,7 @@
 
 ## The first function makeCacheMatrix() 
 ## sets up the cache (but does not calculate the inverse) 
-## producing a list of functions set(), get(), setmean(), getmean()
+## producing a list of functions: set(), get(), setinverse(), getinverse()
 
 makeCacheMatrix <- function(m = matrix()) {
         inv <- NULL
@@ -38,7 +38,7 @@ cacheSolve <- function(m, ...) {
         inv 
        }
 
-## Example to illustrate use (remove # at beginning of lines)
+## Example to illustrate use of functions (remove # at beginning of lines)
 #mymat <- rbind(c(0,2),c(1,3))  ## inverse is rbind(c(-1.5,1),c(0.5,3))
 #cmat <- makeCacheMatrix(mymat) ## set up on mymat but do not calculate yet
 #cacheSolve(cmat)               ## nothing cached so calculate and cache 
