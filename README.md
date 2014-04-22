@@ -5,10 +5,20 @@ course by Roger D. Peng, caching the inverse of a matrix.
 
 Two R scripts are also in the repository:
 
-1. cachematrix.R as requested for the assignment
-2. cachevectormean.R using the example code below
+1. `cachematrix.R` as requested for the assignment
+2. `cachevectormean.R` using the example code below
 
-cachematrix.R is adapted from cachevectormean.R
+`cachematrix.R` is adapted from `cachevectormean.R`, as is obvious comparing 
+the two scripts.
+
+`cachematrix.R` contains the code for two functions: 
+`makeCacheMatrix()` and `cacheSolve()`. 
+Using these, the following R code illustrates how they work: 
+
+    mymat <- rbind(c(0,2),c(1,3))    ## inverse is rbind(c(-1.5,1),c(0.5,3))
+    invmat <- makeCacheMatrix(mymat) ## set up on mymat but not calculate yet
+    cacheSolve(invmat)               ## nothing cached so calculate and cache 
+    cacheSolve(invmat)               ## this time inverse cached so use cache 
 
 The original instructions for the assignment are below.
 
