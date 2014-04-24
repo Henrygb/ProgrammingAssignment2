@@ -6,17 +6,17 @@
 ## producing a list of functions: set(), get(), setinverse(), getinverse()
 
 makeCacheMatrix <- function(mat = matrix()) {
-        inv <- NULL
-        set <- function(y) {
+        inv <- NULL                                      # prepare for inverse
+        set <- function(y) {                             # set data function
                 mat <<- y
                 inv <<- NULL
                }
-        get <- function() mat
-        setinverse <- function(inverse) inv <<- inverse
-        getinverse <- function() inv 
+        get <- function() mat                            # get data function
+        setinverse <- function(inverse) inv <<- inverse  # set inverse function
+        getinverse <- function() inv                     # get inverse function
         list(set = set, get = get,
-             setinverse = setinverse,
-             getinverse = getinverse)
+             setinverse = setinverse,  
+             getinverse = getinverse)              # return list of 4 functions 
        }
 
 
@@ -28,14 +28,14 @@ makeCacheMatrix <- function(mat = matrix()) {
 cacheSolve <- function(mat, ...) {
         ## Return a matrix that is the inverse of 'mat'
         inv <- mat$getinverse()
-        if(!is.null(inv)) {
+        if(!is.null(inv)) {       # i.e. if cached
                 message("getting cached data")
-                return(inv)
+                return(inv)       # return cached inverse
                }
-        data <- mat$get()
-        inv <- solve(data, ...)
-        mat$setinverse(inv)
-        inv 
+        data <- mat$get()         # get data to calculate   
+        inv <- solve(data, ...)   # calculate inverse
+        mat$setinverse(inv)       # cache inverse
+        inv                       # return inverse
        }
 
 ## Example to illustrate use of functions (remove # at beginning of lines)
